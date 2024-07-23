@@ -47,7 +47,7 @@ class PersonClassview(APIView):
 
     def delete(self,request):
         pk=request.data['id']
-        data=Person.objects.all(id=pk)
+        data=Person.objects.get(id=pk)
         data.delete()
         return Response({"msg":"data deleted !!!"})
 
