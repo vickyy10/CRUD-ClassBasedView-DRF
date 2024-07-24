@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api import views
+from api.views import PersonViewsets
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.PersonClassview.as_view())
+    path('',PersonViewsets.as_view())
 ]
